@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnimeID Scarlet Xylena | Streaming Anime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand"><span class="jp">緋</span><small>AnimeID Scarlet Xylena</small></div>
+  <div class="searchbox">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="searchInput" type="text" placeholder="Cari judul anime...">
+  </div>
+</header>
+
+<nav class="genres" id="genreNav"></nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">今夜のおすすめ ・ Scarlet Xylena Pick</p>
+  <h1 class="jp">好きなアニメを、<br>好きなだけ。</h1>
+  <p>Koleksi AnimeID Scarlet Xylena. Semua judul dengan nama Jepang asli. Klik judul lalu tempel link video kamu sendiri — semua slot masih kosong.</p>
+  <button class="hero-btn" onclick="document.getElementById('katalog').scrollIntoView()">Lihat katalog ↓</button>
+</div>
+
+<main>
+  <div class="section-head" id="katalog">
+    <h2><span class="jp">カタログ</span>Semua Anime</h2>
+    <span class="count" id="resultCount"></span>
+  </div>
+  <div class="grid" id="animeGrid"></div>
+</main>
+
+<footer>AnimeID Scarlet Xylena — dibuat untuk koleksi pribadi. Semua slot video kosong, isi sendiri linknya 🌙</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <div class="modal-poster" id="modalPoster"></div>
+      <div>
+        <h3 class="jp" id="modalTitleJp"></h3>
+        <p class="romaji" id="modalTitleRomaji"></p>
+        <div class="tags" id="modalTags"></div>
+      </div>
+      <button class="modal-close" id="closeModal" aria-label="Tutup">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="desc" id="modalDesc"></p>
+      <div class="video-slot" id="videoSlot"></div>
+      <div class="add-video-form">
+        <input id="videoUrlInput" type="text" placeholder="Tempel link video (YouTube embed / .mp4) di sini...">
+        <button id="saveVideoBtn">Simpan</button>
+        <button class="clear-btn" id="clearVideoBtn" type="button">Hapus</button>
+      </div>
+      <p class="hint">Link YouTube biasa otomatis diubah ke embed. Video tersimpan di localStorage browser ini.</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
