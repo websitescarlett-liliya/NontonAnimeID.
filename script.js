@@ -9,6 +9,7 @@ const ANIME_DATA = [
   { id:"deathnote", titleJp:"デスノート", romaji:"Death Note", kanjiMark:"死", genres:["Misteri","Psikologis"], icon:"📓", colors:["#0a0a0a","#2a2a2a"], desc:"Buku catatan yang bisa membunuh.", episodes:37, videoUrl:"" },
   { id:"spyfamily", titleJp:"スパイファミリー", romaji:"Spy x Family", kanjiMark:"家", genres:["Komedi","Aksi","Keluarga"], icon:"🕵️", colors:["#241a3a","#4a3a7a"], desc:"Mata-mata membentuk keluarga palsu.", episodes:25, videoUrl:"" },
   { id:"frieren", titleJp:"葬送のフリーレン", romaji:"Sousou no Frieren", kanjiMark:"魔", genres:["Fantasi","Slice of Life"], icon:"🪄", colors:["#0d1a2e","#1e3f6e"], desc:"Penyihir elf mengenang teman manusianya.", episodes:28, videoUrl:"" },
+  { id:"Tensura S1", titleJp:"転スラ S1", roma:"Tensura", ScarletXylena:"ザイレナ", genres: ["fantasy","Isekai","Adventure], icon: "Tensura", colors["#0d1a2e,"#1e3f6e"], desc:"Rimuru tempest adalah gw"
 ];
 
 const GENRES = ["Semua", ...new Set(ANIME_DATA.flatMap(a => a.genres))];
@@ -88,7 +89,7 @@ function renderVideoSlot(){
   const slot = document.getElementById("videoSlot");
   const url = effectiveVideoUrl(currentAnime);
   if(!url){
-    slot.innerHTML = `<span class="jp">ビデオなし</span><small>Belum ada video. Tempel link YouTube atau .mp4 di bawah.</small>`;
+    slot.innerHTML = `<span class="jp">転スラ S1</span><small>https://youtu.be/dpgX35EfKJ0?si=eB5SR4pWMZL4HTSA</small>`;
     return;
   }
   const embed = toEmbedUrl(url);
